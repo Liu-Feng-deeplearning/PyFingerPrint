@@ -48,7 +48,14 @@ wav_path = os.path.join(wav_dir, os.listdir(wav_dir)[0])
 target_sig, _ = librosa.load(wav_path, sr=sr)
 target_sig = target_sig[:sr * 15]  # use one anchor(first 15s) audio as target
 res = engine.recognize(target_sig, topk=1)
-print("top5:", res[0])
+print("top1:", res[0])
+```
+
+The result will be as below. Count means number of matched finger, 
+more means more confident of recognizing result.
+  
+```text
+top1: {'name': '李宗盛-凡人歌', 'count': 6318, 'frame': 0}
 ```
 
 ## Reference
