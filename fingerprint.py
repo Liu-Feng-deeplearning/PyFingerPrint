@@ -18,8 +18,8 @@ from scipy.fftpack import fft
 
 class FpExtractor:
   """Extractor of fingerprint, computer finger print with signal.
-  Input: signal (recommand with sample-rate of 8k)
-  Output: finger-print
+  Input: signal (recommend using sample-rate of 8k)
+  Output: fingers
   """
 
   def __init__(self, hp):
